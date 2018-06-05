@@ -19,8 +19,7 @@ public class User {
     private String username;
 
     @NotEmpty
-    @Size(min = 4)
-    private String password;
+    private String hashedPassword;
 
     private String role;
 
@@ -36,12 +35,12 @@ public class User {
         this.username = username;
     }
 
-    public String getPassword() {
-        return password;
+    public String getHashedPassword() {
+        return hashedPassword;
     }
 
-    public void setPassword(String password) {
-        this.password = password;
+    public void setHashedPassword(String hashedPassword) {
+        this.hashedPassword = hashedPassword;
     }
 
     public void setRole(String role) {
